@@ -25,7 +25,7 @@ router.post ('/', async (req, res, next) => {
     } else {
       res.render ('admin/login', {
         layout: 'admin/layout',
-        error: true;
+        error: true
       });
     }
   } catch (error) {
