@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container" style="margin:100px auto">
+        <div class="row">
+            <div class="col-6 offset-3">
+                <h4>Agregar una novedad</h4>
+                <form action="/admin/novedades/agregar" method="post">
+                   <div class="form-group">
+                       <input type="text" name="titulo" class="form-control" placeholder="Titulo">
+                   </div>
+                   <div class="form-group">
+                       <textarea name="subtitulo" type="text" class="form-control" placeholder="Subtitulo"></textarea>
+                   </div>
+                   <div class="form-group">
+                       <textarea name="cuerpo" type="text" class="form-control" placeholder="Cuerpo"></textarea>
+                   </div>
+                   <button type="submit" class="btn btn-primary">Guardar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    {{#if error}}
+    <h5> {{ message }}</h5>
+    {{/if}}
+</body>
+</html>
