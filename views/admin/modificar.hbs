@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container" style="margin:50px auto">
+        <div class="row">
+            <div class="col-6 offset-3">
+                <h4>Modificar la novedad</h4>
+                <form action="/admin/novedades/modificar" method="post">
+                 <input type="hidden" name="id" value="{{novedad.id}}">
+                 <div class="form-group">
+                     <input type="text" placeholder="Titulo" value="{{novedad.titulo}}" class="form-control" name="titulo">
+                 </div>
+                 <div class="form-group">
+                     <textarea name="subtitulo" class="form-control" placeholder="Subtitulo">{{novedad.subtitulo}}</textarea>
+                 </div>
+                 <div class="form-group">
+                     <textarea name="cuerpo" placeholder="Cuerpo" class="form-control">{{novedad.cuerpo}}</textarea>
+                 </div>
+                 <button type="submit" class="btn btn-primary">Modificar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    {{#if error}}
+       <h5>{{message}}</h5>
+    {{/if}}   
+</body>
+</html>

@@ -42,10 +42,10 @@
                             {{#each novedades}}
                             <tr>
                             <th scope="row">{{ id }}</th>
-                            <td>{{titulo}}</td>
+                            <td>{{ titulo }}</td>
                             <td class="text-center">
-                                <a href="#" title="Editar" class="bt btn-sm btn-secondary"><i class="fa fa-pencil"></i></a>
-                                <a href="#" title="Eliminar" class="btn btn-sm btn-secondary"><i class="fa fa-trash"></i></a>                
+                                <a href="/admin/novedades/modificar/{{id}}" title="Editar" class="bt btn-sm btn-secondary"><i class="fa fa-pencil"></i></a>
+                                <a href="/admin/novedades/eliminar/{{id}}" title="Eliminar" class="btn btn-sm btn-secondary"><i class="fa fa-trash"></i></a>                
                             </td>
                             </tr>
                             {{/each}}
